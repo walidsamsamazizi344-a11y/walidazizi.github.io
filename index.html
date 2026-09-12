@@ -96,20 +96,17 @@
         </div>
       </div>
 
-      <div class="books">
-        <!-- برای هر کتاب جدید، یک کارت مانند این اضافه کن -->
-        <article class="book">
-          <div class="cover">
-  <img src="books/important-cover.png" alt="Microwave Engineering Questions and Answers – Antenna Basics">
+      <div class="section-head">
+  <div>
+    <h2>آخرین کتاب‌ها</h2>
+    <p class="muted">کتاب‌ها و جزوه‌های منتشرشده</p>
+  </div>
 </div>
-          <div class="book-body">
-            <h3>Microwave Engineering Questions and Answers – Antenna Basics </h3>
-            <p>This set of Microwave Engineering Multiple Choice Questions & Answers (MCQs) focuses on “Antenna Basics”.</p>
-            <div class="book-actions">
-              <a class="small" href="books/important.pdf">مطالعه / PDF</a>
-            </div>
-          </div>
-        </article>
+
+<div class="books" id="books-container"></div>
+
+</div>
+</section>
 
         <article class="book">
           <div class="cover">کتاب جدید</div>
@@ -140,7 +137,33 @@
     </div>
   </section>
 </main>
+<script>
+fetch('books.json')
+  .then(response => response.json())
+  .then(books => {
+    const container = document.getElementById('books-container');
 
+    books.forEach(book => {
+      container.innerHTML += `
+        <article class="book">
+          <div class="cover">
+            <img src="${book.cover}" alt="${book.title}">
+          </div>
+
+          <div class="book-body">
+            <h3>${book.title}</h3>
+            <p>${book.description}</p>
+
+            <div class="book-actions">
+              <a class="small" href="${book.pdf}" target="_blank">مطالعه / PDF</a>
+            </div>
+          </div>
+        </article>
+      `;
+    });
+  })
+  .catch(error => console.error('Error loading books:', error));
+</script>
 <footer>
   <div class="container">© 2026 Walid Azizi — Digital Library</div>
 </footer>
