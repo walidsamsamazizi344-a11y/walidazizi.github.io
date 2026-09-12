@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کتابخانه دیجیتال ولیـد عزیزی</title>
+  <meta name="description" content="کتابخانه دیجیتال و آثار علمی ولیـد عزیزی">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Tahoma,Arial,sans-serif;background:#f7f8fc;color:#172033;line-height:1.8}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{background:#fff;border-bottom:1px solid #e8eaf0;position:sticky;top:0;z-index:10}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font-size:22px;font-weight:800}
+    .logo span{font-size:13px;color:#6b7280;display:block;font-weight:400;margin-top:-5px}
+    .links{display:flex;gap:24px;color:#4b5563;font-size:14px}
+    .links a:hover{color:#111827}
+    .hero{padding:85px 0 70px;background:linear-gradient(135deg,#eef2ff,#fff)}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}
+    .badge{display:inline-block;padding:6px 12px;border-radius:999px;background:#e7eafe;color:#4f46e5;font-size:13px;margin-bottom:18px}
+    h1{font-size:46px;line-height:1.35;margin-bottom:18px}
+    .hero p{font-size:17px;color:#5b6475;max-width:650px}
+    .buttons{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+    .btn{padding:11px 20px;border-radius:10px;font-weight:700;font-size:14px}
+    .primary{background:#111827;color:#fff}.secondary{background:#fff;border:1px solid #d9dce5}
+    .hero-card{background:#fff;border:1px solid #e5e7eb;border-radius:22px;padding:30px;box-shadow:0 15px 40px #1f29370d}
+    .book-icon{font-size:72px;text-align:center;margin-bottom:10px}
+    .section{padding:65px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px;gap:20px}
+    .section h2{font-size:28px}
+    .muted{color:#6b7280;font-size:14px}
+    .books{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .book{background:#fff;border:1px solid #e6e8ee;border-radius:16px;overflow:hidden;transition:.2s}
+    .book:hover{transform:translateY(-4px);box-shadow:0 12px 30px #1f293712}
+    .cover{height:230px;background:linear-gradient(145deg,#dfe4ff,#f5f6ff);display:flex;align-items:center;justify-content:center;padding:25px;text-align:center;font-weight:800;font-size:20px}
+    .book-body{padding:18px}
+    .book h3{font-size:17px;margin-bottom:6px}
+    .book p{font-size:13px;color:#6b7280;min-height:48px}
+    .book-actions{display:flex;gap:8px;margin-top:14px}
+    .small{padding:8px 12px;border-radius:8px;font-size:12px;background:#111827;color:#fff}
+    .outline{background:#fff;color:#111827;border:1px solid #d8dce5}
+    .about{background:#fff;border-top:1px solid #e9ebf0;border-bottom:1px solid #e9ebf0}
+    footer{padding:30px 0;color:#6b7280;font-size:13px;text-align:center}
+    @media(max-width:800px){
+      .hero-grid{grid-template-columns:1fr}
+      h1{font-size:35px}
+      .books{grid-template-columns:1fr 1fr}
+      .links{display:none}
+    }
+    @media(max-width:520px){.books{grid-template-columns:1fr}.hero{padding:55px 0}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="#">کتابخانه ولیـد عزیزی<span>Digital Library</span></a>
+      <div class="links">
+        <a href="#home">خانه</a>
+        <a href="#books">کتاب‌ها</a>
+        <a href="#about">درباره من</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">کتابخانه دیجیتال شخصی</span>
+        <h1>دانش را بخوان، یاد بگیر و به اشتراک بگذار.</h1>
+        <p>در اینجا می‌توانم کتاب‌ها، جزوه‌ها و آثار علمی خود را به‌صورت منظم در اختیار خوانندگان قرار بدهم.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#books">مشاهده کتاب‌ها</a>
+          <a class="btn secondary" href="#about">درباره من</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="book-icon">📚</div>
+        <h3 style="text-align:center">کتابخانه من</h3>
+        <p class="muted" style="text-align:center">مجموعه‌ای از کتاب‌ها و نوشته‌های علمی</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="books">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>آخرین کتاب‌ها</h2>
+          <p class="muted">کتاب‌ها و جزوه‌های منتشرشده</p>
+        </div>
+      </div>
+
+      <div class="books">
+        <!-- برای هر کتاب جدید، یک کارت مانند این اضافه کن -->
+        <article class="book">
+          <div class="cover">جلد کتاب<br>OFDM</div>
+          <div class="book-body">
+            <h3>بررسی و شبیه‌سازی سیستم OFDM در متلب</h3>
+            <p>یک اثر علمی در زمینه سیستم OFDM و شبیه‌سازی آن در MATLAB.</p>
+            <div class="book-actions">
+              <a class="small" href="books/ofdm.pdf">مطالعه / PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="cover">کتاب جدید</div>
+          <div class="book-body">
+            <h3>به‌زودی...</h3>
+            <p>کتاب بعدی می‌تواند در این قسمت قرار بگیرد.</p>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="cover">کتاب جدید</div>
+          <div class="book-body">
+            <h3>به‌زودی...</h3>
+            <p>با اضافه‌شدن کتاب‌های بیشتر، این کتابخانه بزرگ‌تر می‌شود.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="container">
+      <h2>درباره من</h2>
+      <p class="muted" style="max-width:750px;margin-top:12px">
+        این بخش برای معرفی نویسنده، زمینه‌های علمی، تحصیلات و فعالیت‌های شماست.
+        بعداً می‌توانیم متن واقعی و عکس یا لوگوی شما را اینجا اضافه کنیم.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2026 Walid Azizi — Digital Library</div>
+</footer>
+
+</body>
+</html>
